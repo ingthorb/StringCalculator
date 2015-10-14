@@ -30,6 +30,10 @@ public class CalculatorTest {
     public void testMultipleNumbers2(){
     	assertEquals(15, Calculator.add("2,5,2,6"));
     }
+    /*@Test
+    public void testNewlineNumbers(){
+    	assertEquals(6,Calculator.add("1\n2,3"));
+    }*/
 
 
 
