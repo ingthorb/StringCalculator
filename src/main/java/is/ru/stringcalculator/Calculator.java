@@ -7,16 +7,14 @@ public class Calculator {
 		{
 			return 0;
 		}
-		else if(text.contains(","))
+		else if(text.contains(",") | text.contains("\n"))
 		{
 			int total = 0;
-
 			String [] numbers = splittext(text);
 			for(String number : numbers)
 			{
 				total += Integer.parseInt(number);
 			}
-			
 			return total;
 		}
 		else
@@ -27,7 +25,7 @@ public class Calculator {
 	}
 	private static String[] splittext(String number)
 	{
-		return number.split(",");
+		return number.split ("[,\\n]");
 	}
 
 
