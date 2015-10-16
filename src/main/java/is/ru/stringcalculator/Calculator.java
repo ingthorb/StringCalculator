@@ -35,6 +35,10 @@ public class Calculator {
         {
          throw new IllegalArgumentException("Negatives not allowed");
         }
+        else if(numb > 1000)
+        {
+        	return 0;
+        }
         else
         {
         	return numb;

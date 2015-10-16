@@ -52,6 +52,17 @@ public class CalculatorTest {
         }
 
 
+     @Test
+	public void testHighNumbers() {
+		assertEquals(2, Calculator.add("1001,2"));
+	}
+
+	@Test
+	public void testHighNumbers2(){
+		assertEquals(4, Calculator.add("2000,4"));
+	}
+
+
 
 
 }
