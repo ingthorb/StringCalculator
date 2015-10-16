@@ -62,6 +62,17 @@ public class CalculatorTest {
 		assertEquals(4, Calculator.add("2000,4"));
 	}
 
+	@Test
+	public void TestnewDeliminetor()
+	{
+		assertEquals(6, Calculator.add("//[***]\n1***2***3"));
+	}
+	@Test
+	public void TestnewlengthyDeliminetor()
+	{
+		assertEquals(6, Calculator.add("//[$$]\n1$$2$$3"));
+	}
+
 
 
 
