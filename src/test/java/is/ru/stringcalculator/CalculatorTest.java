@@ -40,6 +40,18 @@ public class CalculatorTest {
 
     }
 
+    @Test
+    (expected=IllegalArgumentException.class)
+        public void testNegativeNumbers(){
+            assertEquals("Negatives not allowed: -4, -5", Calculator.add("-4,-5"));
+        }
+    @Test 
+    (expected=IllegalArgumentException.class)
+        public void testNegativeException(){
+            assertEquals("Negatives not allowed: -4, -5", Calculator.add("-4,-5"));
+        }
+
+
 
 
 }

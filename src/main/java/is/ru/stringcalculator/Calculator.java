@@ -30,7 +30,15 @@ public class Calculator {
     }
     private static int toInt(String number)
     {
-        return Integer.parseInt(number);
+        Integer numb = Integer.parseInt(number);
+        if(numb < 0)
+        {
+         throw new IllegalArgumentException("Negatives not allowed");
+        }
+        else
+        {
+        	return numb;
+        }
     }
     private static int sum(String [] numbers)
     {
