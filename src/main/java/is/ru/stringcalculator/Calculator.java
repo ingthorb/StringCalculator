@@ -2,7 +2,7 @@ package is.ru.stringcalculator;
 import java.util.ArrayList;
 public class Calculator {
 
-	 public static int add(String text) {
+	           public static int add(String text) {
 
             if (text.equals("")) {
                 return 0;
@@ -10,8 +10,23 @@ public class Calculator {
                 String[] delimeters = text.split("//");
                 String fetchingdelimeter = delimeters[1];
                 String news = delimeters[1];
-                String newDelimeters = fetchingdelimeter.substring((1) , fetchingdelimeter.lastIndexOf("]"));
-                String [] news2 =  news.split("\n");
+                String newDelimeters = fetchingdelimeter.substring((1) , fetchingdelimeter.indexOf("]"));
+
+                String [] doubledel = news.split("]");
+                String checkifdouble = doubledel[1];
+                if(checkifdouble.contains("[")) {
+                    String doubled = doubledel[2];
+                    String delimeternr2 = checkifdouble.substring((1), checkifdouble.length());
+                    String [] newssss =  doubled.split("\n");
+                    //String newstring = news2[1];
+                    String tryingnew = newssss[1];
+                    //Eins og hann sé að fara útfyrir en smkv intellij er þetta alveg til sem meikar ekki sens
+                    String newstringreplaced = tryingnew.replace(newDelimeters, "n");
+                    String newstringreplaced2 = newstringreplaced.replace(delimeternr2,"n");
+                    String replacedelimeternr1 = newDelimeters.replace(newDelimeters, "n");
+                    return sum(doubledeliminator(newstringreplaced2 , replacedelimeternr1));
+                }
+               String [] news2 =  news.split("\n");
                 String newstring = news2[1];
                 String replacedelimeter = newDelimeters.replace(newDelimeters, "n");
                 String newstringreplaced = newstring.replace(newDelimeters, "n");
@@ -24,6 +39,7 @@ public class Calculator {
                 String newstring = fetchingdelimeter.substring(2, fetchingdelimeter.length());
                 return sum(newdeliminator(newstring, delimeter));
             }
+
                 else if (text.contains(",") | text.contains("\n")) {
                 return sum(splittext(text));
             } else {
@@ -47,7 +63,7 @@ public class Calculator {
 
         private static int sum(String[] numbers) {
             int total = 0;
-          
+            //Viltu ekki tjekka hér hvort negativedamn er > 0? og kasta þá exception?
             ArrayList<Integer> negativenumbers = new ArrayList<Integer>();
             String negative = "";
             for (String number : numbers) {
@@ -76,6 +92,11 @@ public class Calculator {
         }
 
         private static String[] newdeliminator(String number, String delimeter) {
+            return number.split(delimeter);
+        }
+        private static String[] doubledeliminator(String number,String delimeter)
+        {
+
             return number.split(delimeter);
         }
 

@@ -71,6 +71,18 @@ public class CalculatorTest {
 	{
 		assertEquals(6, Calculator.add("//[$$]\n1$$2$$3"));
 	}
+	@Test
+	public void Testmultipledelimters(){
+			assertEquals(6, Calculator.add("//[*][%]\n1*2%3"));
+	}
+	@Test
+	public void Testmultipledelimters2(){
+		assertEquals(8, Calculator.add("//[#][!]\n4#3!1"));
+	}
+		@Test
+	public void Testmultipledelimters3(){
+		assertEquals(11, Calculator.add("//[>][<]\n4<3>1<3"));
+	}
 
 
 
