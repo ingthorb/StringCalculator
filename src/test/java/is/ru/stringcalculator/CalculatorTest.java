@@ -39,7 +39,6 @@ public class CalculatorTest {
     	assertEquals(3, Calculator.add("//;\n1;2"));
 
     }
-
     @Test
     (expected=IllegalArgumentException.class)
         public void testNegativeNumbers(){
