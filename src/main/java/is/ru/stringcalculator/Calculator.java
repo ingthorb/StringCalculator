@@ -18,6 +18,8 @@ public class Calculator {
                     String doubled = doubledel[2];
                     String delimeternr2 = checkifdouble.substring((1), checkifdouble.length());
                     String [] newssss =  doubled.split("\n");
+                    //Had to change this to be able to run in the shell
+                    //Doesn't work in IntelliJ
                     String tryingnew = newssss[1];
    
                     String newstringreplaced = tryingnew.replace(newDelimeters, "n");
