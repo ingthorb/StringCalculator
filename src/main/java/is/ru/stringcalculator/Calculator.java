@@ -2,7 +2,7 @@ package is.ru.stringcalculator;
 import java.util.ArrayList;
 public class Calculator {
 
-	           public static int add(String text) {
+	         public static int add(String text) {
 
             if (text.equals("")) {
                 return 0;
@@ -18,9 +18,8 @@ public class Calculator {
                     String doubled = doubledel[2];
                     String delimeternr2 = checkifdouble.substring((1), checkifdouble.length());
                     String [] newssss =  doubled.split("\n");
-                    //String newstring = news2[1];
                     String tryingnew = newssss[1];
-                    //Eins og hann sé að fara útfyrir en smkv intellij er þetta alveg til sem meikar ekki sens
+   
                     String newstringreplaced = tryingnew.replace(newDelimeters, "n");
                     String newstringreplaced2 = newstringreplaced.replace(delimeternr2,"n");
                     String replacedelimeternr1 = newDelimeters.replace(newDelimeters, "n");
