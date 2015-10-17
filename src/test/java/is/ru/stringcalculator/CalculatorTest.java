@@ -84,6 +84,20 @@ public class CalculatorTest {
 		assertEquals(11, Calculator.add("//[>][<]\n4<3>1<3"));
 	}
 
+	@Test
+	public void Testingdelimeterswithanylenght(){
+		assertEquals(10, Calculator.add("//[***][%%%]\n5***3%%%2"));
+	}
+
+	@Test
+	public void Testingdelimeterswithanylenght2(){
+		assertEquals(14, Calculator.add("//[##][&&&&]\n5##3&&&&6"));
+	}
+
+	@Test
+	public void Testingdelimeterswithanylenght3(){
+		assertEquals(16, Calculator.add("//[!!][&]\n5!!3&8"));
+	}
 
 
 

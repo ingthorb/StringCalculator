@@ -62,7 +62,6 @@ public class Calculator {
 
         private static int sum(String[] numbers) {
             int total = 0;
-            //Viltu ekki tjekka hér hvort negativedamn er > 0? og kasta þá exception?
             ArrayList<Integer> negativenumbers = new ArrayList<Integer>();
             String negative = "";
             for (String number : numbers) {
@@ -93,9 +92,9 @@ public class Calculator {
         private static String[] newdeliminator(String number, String delimeter) {
             return number.split(delimeter);
         }
+
         private static String[] doubledeliminator(String number,String delimeter)
         {
-
             return number.split(delimeter);
         }
 
