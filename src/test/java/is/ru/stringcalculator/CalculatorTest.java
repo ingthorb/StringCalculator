@@ -10,6 +10,7 @@ public class CalculatorTest {
     }
 
 	@Test
+	
 	public void testEmptyString() {
 		assertEquals(0, Calculator.add(""));
 	}
@@ -17,6 +18,11 @@ public class CalculatorTest {
 	public void testOneNumber() {
 		assertEquals(1, Calculator.add("1"));
 	}
+	@Test
+	public void testOneNumber1() {
+		assertEquals(6, Calculator.add("6"));
+	}
+
 
 	@Test
 	public void testTwoNumbers() {

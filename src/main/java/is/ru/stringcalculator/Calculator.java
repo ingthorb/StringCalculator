@@ -44,7 +44,7 @@ public class Calculator {
                 else if (text.contains(",") | text.contains("\n")) {
                 return sum(splittext(text));
             } else {
-                return 1;
+                return toInt(text);
             }
 
         }
