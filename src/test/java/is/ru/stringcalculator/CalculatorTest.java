@@ -6,14 +6,14 @@ import org.junit.Test;
 public class CalculatorTest {
 
 	public static void main(String args[]) {
-      org.junit.runner.JUnitCore.main("is.ru.stringcalculator.CalculatorTest");
+      org.junit.runner.JUnitCore.main("is.ru.tictactoe.TicTacToeTest");
     }
 
 	@Test
 	
 	public void testEmptyString() {
 		assertEquals(0, Calculator.add(""));
-	}
+	} 
 	@Test
 	public void testOneNumber() {
 		assertEquals(1, Calculator.add("1"));
